@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 body {
     background: #131212;
 }
@@ -23,7 +25,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: masonry;
     align-content: start; 
-    gap: 10px;
+    gap: 40px;
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -37,9 +39,19 @@ figure {
 figcaption {
     grid-row: 2;
     grid-column: 1;
-    background-color: rgba(255, 255, 255, .5);
-    padding: .2em .5em;
+    /* background-color: rgba(255, 255, 255, .5); */
+    padding: 1em;
     justify-self: start;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.masonry-figure span {
+    color: #fff;
+    font-family: 'Itim', cursive;
+    transition: .8s opacity;
 }
 
 .masonry-img {
@@ -49,10 +61,24 @@ figcaption {
     transition: .8s opacity;
 }
 
-#masonry-gallery:hover img {
+.portfolio-img {
+    max-height: 30px;
+    max-width: 30px;
+    width: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: solid 3px #fff;
+    transition: .8s opacity;
+}
+
+#masonry-gallery:hover img,
+#masonry-gallery:hover span {
     opacity: 0.3;
 }
 
-#masonry-gallery:hover img:hover {
+#masonry-gallery:hover .masonry-figure :hover {
     opacity: 1;
 }
